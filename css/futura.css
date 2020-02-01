@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#futura {
+  font-family: 'futura-pt', Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  background-color: gray;
+}
+/*# sourceMappingURL=futura.css.map */
