@@ -10,11 +10,12 @@ $darkGray: #262626;
 $muteGray: #f2f2f2;
 
 @mixin maxLineMeasure {
-  max-width: 40rem; // !ch suppoert fallback
+  max-width: 40rem; // !ch support fallback
   max-width: 75ch;
 }
 
 @mixin optimizeFitty {
+  // https://github.com/rikschennink/fitty#performance
   display: inline-block;
   white-space: nowrap;
 }
@@ -23,25 +24,13 @@ body {
   overflow-x: hidden;
 }
 
-footer {
-  color: $muteGray;
-  background-color: $darkGray;
-}
-
-a {
-  color: inherit;
-
-  &:hover {
-    color: $orange;
-  }
-}
-
 h1,
 h2,
 h3,
 h4 {
   font-family: 'fira-mono', monospace;
-  color: $darkGray;
+  // letter-spacing: -0.1rem;
+  color: inherit;
   hanging-punctuation: first last;
   line-height: 1.2;
 }
@@ -52,13 +41,14 @@ ul,
 ol,
 li,
 span {
-  color: $darkGray;
-  @include maxLineMeasure();
-  line-height: 1.4;
-  hanging-punctuation: first last;
-  font-variant-numeric: proportional-nums ordinal;
   font-family: 'fira-sans', 'Trebuchet MS', 'Lucida Sans Unicode',
     'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.4;
+  color: inherit;
+
+  @include maxLineMeasure();
+  font-variant-numeric: proportional-nums ordinal;
+  hanging-punctuation: first last;
 }
 
 ul,
@@ -66,6 +56,34 @@ ol {
   list-style-position: inside;
   list-style-type: square;
   list-style-image: none;
+}
+
+#intro,
+#exit {
+  background-color: $darkGray;
+}
+
+#exit,
+#intro {
+  h1,
+  h2,
+  h3,
+  h4,
+  a,
+  p,
+  ul,
+  li,
+  ol,
+  span {
+    color: $muteGray;
+  }
+  a {
+    text-decoration: underline;
+    text-decoration-color: $orange;
+    &:hover {
+      color: $orange;
+    }
+  }
 }
 
 .viewport {
@@ -83,27 +101,6 @@ ol {
   padding: 1rem;
   align-items: center;
   justify-content: space-around;
-}
-
-#intro {
-  a {
-    color: $darkGray;
-  }
-}
-
-#exit {
-  h1,
-  h2,
-  h3,
-  h4,
-  a,
-  p,
-  ul,
-  li,
-  ol,
-  span {
-    color: $muteGray;
-  }
 }
 
 .features.flex {
@@ -127,10 +124,6 @@ ol {
   width: 100%; // container
   @include maxLineMeasure(); //max width
   box-shadow: rgba(0, 0, 0, 0.5) -0.25rem 0.25rem 1rem 0px;
-}
-
-#exit {
-  color: white;
 }
 
 @media screen and (min-width: 600px) {
