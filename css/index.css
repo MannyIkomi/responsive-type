@@ -28,6 +28,7 @@ h3,
 h4 {
   font-family: 'fira-mono', monospace;
   hanging-punctuation: first last;
+  line-height: 1.2;
 }
 
 a,
@@ -38,6 +39,7 @@ ol,
 span {
   max-width: 40rem;
   max-width: 75ch;
+  line-height: 1.4;
   hanging-punctuation: first last;
   font-variant-numeric: proportional-nums ordinal;
   font-family: 'fira-sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -64,26 +66,12 @@ span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.document {
-  min-width: 10rem;
-  margin: 1rem;
-  width: 50%;
-  max-width: 40rem;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.5) -0.25rem 0.25rem 1rem 0px;
-          box-shadow: rgba(0, 0, 0, 0.5) -0.25rem 0.25rem 1rem 0px;
-}
-
-.document img {
-  display: block;
-  width: 100%;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+#intro a {
+  color: #262626;
 }
 
 .features.flex {
@@ -100,15 +88,40 @@ span {
           justify-content: start;
 }
 
-@media screen and (min-width: 600px) {
-  .features.flex {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+.document {
+  margin: 1rem;
+  min-width: 10rem;
+  width: 100%;
+  max-width: 40rem;
+  max-width: 75ch;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) -0.25rem 0.25rem 1rem 0px;
+          box-shadow: rgba(0, 0, 0, 0.5) -0.25rem 0.25rem 1rem 0px;
+}
+
+.document img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 #exit {
   color: white;
+}
+
+@media screen and (min-width: 600px) {
+  .features.flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #intro {
+    padding: 2rem;
+  }
 }
 /*# sourceMappingURL=index.css.map */
