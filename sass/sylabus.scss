@@ -1,0 +1,33 @@
+@import 'index';
+
+$joanna: 'joanna-nova', Cambria, Cochin, Georgia, Times, 'Times New Roman',
+  serif;
+
+@mixin joannaText {
+  font-family: $joanna;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+#sylabus {
+  font-family: 'joanna-nova', Cambria, Cochin, Georgia, Times, 'Times New Roman',
+    serif;
+
+  p,
+  ul,
+  li,
+  ol,
+  span {
+    @include maxLineMeasure();
+    @include joannaText();
+    font-variant-numeric: proportional-nums ordinal;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+    @include joannaText();
+  }
+}

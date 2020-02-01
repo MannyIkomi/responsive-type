@@ -7,7 +7,7 @@
 
 $orange: #ff5e00;
 $darkGray: #262626;
-$muteGray: #262626;
+$muteGray: #f2f2f2;
 
 @mixin maxLineMeasure {
   max-width: 40rem; // !ch suppoert fallback
@@ -19,22 +19,18 @@ $muteGray: #262626;
   white-space: nowrap;
 }
 
-@mixin futuraText {
-  font-family: 'futura-pt', sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.4;
-}
-
 body {
   overflow-x: hidden;
 }
 
 footer {
+  color: $muteGray;
   background-color: $darkGray;
 }
 
 a {
-  color: white;
+  color: inherit;
+
   &:hover {
     color: $orange;
   }
@@ -45,6 +41,7 @@ h2,
 h3,
 h4 {
   font-family: 'fira-mono', monospace;
+  color: $darkGray;
   hanging-punctuation: first last;
   line-height: 1.2;
 }
@@ -55,6 +52,7 @@ ul,
 li,
 ol,
 span {
+  color: $darkGray;
   @include maxLineMeasure();
   line-height: 1.4;
   hanging-punctuation: first last;
@@ -83,6 +81,11 @@ span {
 #intro {
   a {
     color: $darkGray;
+  }
+}
+#exit {
+  a {
+    color: $muteGray;
   }
 }
 

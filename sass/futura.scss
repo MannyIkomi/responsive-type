@@ -1,11 +1,19 @@
 @import 'index';
 
+$futura: 'futura-pt', Arial, Helvetica, sans-serif;
+
+@mixin futuraText {
+  font-family: $futura;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
 .fitty {
   @include optimizeFitty();
 }
 
 #futura {
-  font-family: 'futura-pt', Arial, Helvetica, sans-serif;
+  font-family: $futura;
   // futura article styles
   width: 100%;
 
@@ -28,6 +36,7 @@
   h2,
   h3,
   h4 {
+    line-height: 1;
     @include futuraText();
   }
 }
@@ -49,9 +58,8 @@
     grid-column: 3 / 5;
     grid-row: 1 / 2;
   }
-
   .futura-text {
-    grid-column: 2 / 5;
+    grid-column: 2 / 4;
     grid-row: 2 / 3;
   }
 }
