@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="https://use.typekit.net/ypo0jaz.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://use.typekit.net/ypo0jaz.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/futura.css" />
+    <link rel="stylesheet" href="css/sylabus.css" />
     <title>Responsive Typography</title>
   </head>
   <body>
-    <article id="futura" class="">
+    <header id="intro" class="viewport flex">
+      <h1>Typography Reigns&nbsp;Supreme…</h1>
+      <p>
+        During my transition from print to web design I experimented with
+        recreating type posters and documents in order to learn typographic
+        features and responsive design principals. My approach was inspired by a
+        series of projects by
+        <a href="https://labs.jensimmons.com/">Jen Simmons</a>
+      </p>
+      <section class="features flex">
+        <figure class="document">
+          <img
+            src="/assets/Futura Type Poster - Project 6 upload.jpg"
+            alt='Futura type poster, "The Type of our Time"'
+          />
+        </figure>
+        <figure class="document">
+          <img
+            src="/assets/VMA114 History of Graphic Design Sylabus_Page_1.jpg"
+            alt="Visual and Media Arts Department History of Graphic Design Sylabus"
+          />
+        </figure>
+      </section>
+    </header>
+    <article id="futura" class="viewport">
       <!-- SVG 100% viewport fit -->
       <div class="futura-grid">
-        <h1 class="fitty">futura</h1>
-        <h2>The Type of our Time</h2>
-
-        <p>
+        <div class="futura-title">
+          <h1 class="fitty">futura</h1>
+        </div>
+        <div class="futura-subtitle">
+          <h2 class="fitty">The Type of our Time</h2>
+        </div>
+        <p class="futura-text">
           is a geometric sans serif typeface designed by Paul Renner released in
           1927 by the Bauer Type Foundry. Futura is based on geometric shapes
           like the circle, triangle and squares with restrained optical
@@ -25,20 +54,39 @@
           proportions to roman square capitals. Unlike other sans serif
           typefaces at the time, futura had a relatively low x-height, making it
           one of the first to be suitable for body copy. Futura is one of the
-          most popular fonts of the twentieth century.
+          most popular fonts of the twentieth&nbsp;century.
         </p>
+        <span>X<br />Y<br />Z</span>
+        <span>
+          db <br />
+          qp
+        </span>
+        <span>
+          Aa
+        </span>
       </div>
     </article>
-    <article id="gutenberg">
-      <h1>Movable Type</h1>
+    <article id="gutenberg" class="viewport">
+      <h1>VMA Sylabus</h1>
     </article>
+
     <script src="js/fitty.min.js"></script>
     <script>
-      console.log(fitty)
       fitty('.fitty', {
         minSize: 16, // 1rem
         maxSize: 1280 // 80rem
       })
     </script>
+    <footer id="exit" class="viewport flex">
+      <!-- <h1>typographic features</h1> -->
+      <h1>Typography reigns supreme</h1>
+      <p>
+        …in the ink that we press <br />
+        …in the keys we stroke <br />
+        …in the pixels we render <br />
+        …in the code we write <br />
+      </p>
+      <a href="https://mannyikomi.com">by Manny Ikomi</a>
+    </footer>
   </body>
 </html>
