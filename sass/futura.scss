@@ -9,9 +9,18 @@ body {
   overflow-x: hidden;
 }
 
+@mixin maxLineMeasure {
+  max-width: 40rem;
+  max-width: 75ch;
+}
+
 @mixin optimizeFitty {
   display: inline-block;
   white-space: nowrap;
+}
+
+p {
+  @include maxLineMeasure();
 }
 
 #futura {
@@ -19,7 +28,7 @@ body {
   // futura article styles
   min-height: 100vh;
   width: 100%;
-  background-color: gray;
+  background-color: hsl(0, 0%, 95%);
 }
 
 .fitty {
