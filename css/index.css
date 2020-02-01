@@ -36,8 +36,8 @@ h4 {
 a,
 p,
 ul,
-li,
 ol,
+li,
 span {
   color: #262626;
   max-width: 40rem;
@@ -46,6 +46,13 @@ span {
   hanging-punctuation: first last;
   font-variant-numeric: proportional-nums ordinal;
   font-family: 'fira-sans', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+  list-style-type: square;
+  list-style-image: none;
 }
 
 .viewport {
@@ -77,7 +84,16 @@ span {
   color: #262626;
 }
 
-#exit a {
+#exit h1,
+#exit h2,
+#exit h3,
+#exit h4,
+#exit a,
+#exit p,
+#exit ul,
+#exit li,
+#exit ol,
+#exit span {
   color: #f2f2f2;
 }
 

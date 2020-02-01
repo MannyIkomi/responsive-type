@@ -49,8 +49,8 @@ h4 {
 a,
 p,
 ul,
-li,
 ol,
+li,
 span {
   color: $darkGray;
   @include maxLineMeasure();
@@ -59,6 +59,13 @@ span {
   font-variant-numeric: proportional-nums ordinal;
   font-family: 'fira-sans', 'Trebuchet MS', 'Lucida Sans Unicode',
     'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+  list-style-type: square;
+  list-style-image: none;
 }
 
 .viewport {
@@ -83,8 +90,18 @@ span {
     color: $darkGray;
   }
 }
+
 #exit {
-  a {
+  h1,
+  h2,
+  h3,
+  h4,
+  a,
+  p,
+  ul,
+  li,
+  ol,
+  span {
     color: $muteGray;
   }
 }
