@@ -10,20 +10,38 @@ body {
   overflow-x: hidden;
 }
 
-p {
+p,
+ul,
+li,
+ol,
+span {
   max-width: 40rem;
   max-width: 75ch;
-}
-
-#futura {
-  font-family: 'futura-pt', Arial, Helvetica, sans-serif;
-  min-height: 100vh;
-  width: 100%;
-  background-color: #f2f2f2;
+  font-variant-numeric: proportional-nums ordinal;
 }
 
 .fitty {
   display: inline-block;
   white-space: nowrap;
+}
+
+#futura {
+  font-family: 'futura-pt', Arial, Helvetica, sans-serif;
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 600px) {
+  .futura-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (1fr)[4];
+    -ms-grid-columns: (1fr)[4];
+        grid-template: repeat(4, 1fr)/repeat(4, 1fr);
+  }
 }
 /*# sourceMappingURL=futura.css.map */

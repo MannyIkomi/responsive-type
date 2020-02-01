@@ -10,7 +10,7 @@ body {
 }
 
 @mixin maxLineMeasure {
-  max-width: 40rem;
+  max-width: 40rem; // !ch suppoert fallback
   max-width: 75ch;
 }
 
@@ -19,18 +19,35 @@ body {
   white-space: nowrap;
 }
 
-p {
+p,
+ul,
+li,
+ol,
+span {
   @include maxLineMeasure();
+  font-variant-numeric: proportional-nums ordinal;
+}
+
+.fitty {
+  @include optimizeFitty();
 }
 
 #futura {
   font-family: 'futura-pt', Arial, Helvetica, sans-serif;
   // futura article styles
-  min-height: 100vh;
   width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+
   background-color: hsl(0, 0%, 95%);
+
+  padding: 1rem;
+  overflow: hidden;
 }
 
-.fitty {
-  @include optimizeFitty();
+@media screen and (min-width: 600px) {
+  .futura-grid {
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+  }
 }
