@@ -72,6 +72,7 @@ ol {
 
 #exit a,
 #intro a {
+  cursor: pointer;
   text-decoration: underline;
   -webkit-text-decoration-color: #ff5e00;
           text-decoration-color: #ff5e00;

@@ -78,6 +78,7 @@ ol {
     color: $muteGray;
   }
   a {
+    cursor: pointer;
     text-decoration: underline;
     text-decoration-color: $orange;
     &:hover {

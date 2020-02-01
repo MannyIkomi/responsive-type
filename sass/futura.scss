@@ -41,6 +41,35 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
   }
 }
 
+@keyframes rotateTime {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#clock {
+  // futura animated clock
+  #hour,
+  #minute {
+    transform-box: border-box;
+    transform-origin: center;
+    animation-name: rotateTime;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  #hour {
+    animation-duration: 60s;
+  }
+  #minute {
+    animation-duration: 5s;
+  }
+}
+
 // .futura-title {}
 
 @media screen and (min-width: 600px) {

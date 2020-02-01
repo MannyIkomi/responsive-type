@@ -10,10 +10,6 @@ body {
   overflow-x: hidden;
 }
 
-a:hover {
-  color: #ff5e00;
-}
-
 h1,
 h2,
 h3,
@@ -46,31 +42,6 @@ ol {
   list-style-image: none;
 }
 
-.viewport {
-  max-width: 100vw;
-  min-height: 100vh;
-}
-
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#exit.flex,
-#intro.flex {
-  padding: 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
 #intro,
 #exit {
   background-color: #262626;
@@ -97,6 +68,44 @@ ol {
 #intro ol,
 #intro span {
   color: #f2f2f2;
+}
+
+#exit a,
+#intro a {
+  cursor: pointer;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #ff5e00;
+          text-decoration-color: #ff5e00;
+}
+
+#exit a:hover,
+#intro a:hover {
+  color: #ff5e00;
+}
+
+.viewport {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#exit.flex,
+#intro.flex {
+  padding: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .features.flex {
@@ -180,6 +189,53 @@ ol {
   font-family: "futura-pt", Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   line-height: 1.4;
+}
+
+@-webkit-keyframes rotateTime {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateTime {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#clock #hour,
+#clock #minute {
+  transform-box: border-box;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation-name: rotateTime;
+          animation-name: rotateTime;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+#clock #hour {
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+}
+
+#clock #minute {
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 @media screen and (min-width: 600px) {
