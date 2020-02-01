@@ -83,6 +83,10 @@ ol {
   color: #ff5e00;
 }
 
+#not-spacer-gif {
+  margin: 25vh;
+}
+
 .viewport {
   max-width: 100vw;
   min-height: 100vh;
@@ -138,6 +142,11 @@ ol {
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.disclaim {
+  color: #808080;
+  font-size: 0.66rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -213,8 +222,8 @@ ol {
   }
 }
 
-#clock #hour,
-#clock #minute {
+#clock svg #hour,
+#clock svg #minute {
   transform-box: border-box;
   -webkit-transform-origin: center;
           transform-origin: center;
@@ -228,12 +237,12 @@ ol {
           animation-timing-function: linear;
 }
 
-#clock #hour {
+#clock svg #hour {
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }
 
-#clock #minute {
+#clock svg #minute {
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
 }
@@ -243,30 +252,29 @@ ol {
     max-width: 100vw;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: (1fr)[4];
-    -ms-grid-columns: (1fr)[4];
-        grid-template: repeat(4, 1fr)/repeat(4, 1fr);
+    -ms-grid-rows: (1fr)[6];
+    -ms-grid-columns: (1fr)[5];
+        grid-template: repeat(6, 1fr)/repeat(5, 1fr);
+    grid-auto-flow: row;
   }
   .futura-title {
-    -ms-grid-column: 1;
+    -ms-grid-column: 2;
     -ms-grid-column-span: 3;
-    grid-column: 1 / 4;
+    grid-column: 2 / 5;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
   }
   .futura-subtitle {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 2;
-    grid-column: 3 / 5;
+    grid-column: 4 / -1;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
   }
   .futura-text {
-    -ms-grid-column: 2;
+    -ms-grid-column: 3;
     -ms-grid-column-span: 2;
-    grid-column: 2 / 4;
+    grid-column: 3 / 5;
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;

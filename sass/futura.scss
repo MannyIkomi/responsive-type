@@ -50,7 +50,7 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
   }
 }
 
-#clock {
+#clock svg {
   // futura animated clock
   #hour,
   #minute {
@@ -63,10 +63,10 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
   }
 
   #hour {
-    animation-duration: 60s;
+    animation-duration: 60s; // scaled 60seconds/hour
   }
   #minute {
-    animation-duration: 5s;
+    animation-duration: 5s; // scaled (divide hour by 12)
   }
 }
 
@@ -76,19 +76,20 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
   .futura-grid {
     max-width: 100vw;
     display: grid;
-    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    grid-template: repeat(6, 1fr) / repeat(5, 1fr);
+    grid-auto-flow: row;
   }
 
   .futura-title {
-    grid-column: 1 / 4;
+    grid-column: 2 / 5;
     grid-row: 1 / 2;
   }
   .futura-subtitle {
-    grid-column: 3 / 5;
+    grid-column: 4 / -1;
     grid-row: 1 / 2;
   }
   .futura-text {
-    grid-column: 2 / 4;
+    grid-column: 3 / 5;
     grid-row: 2 / 3;
   }
 }
