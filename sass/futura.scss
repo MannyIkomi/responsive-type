@@ -9,10 +9,19 @@ body {
   overflow-x: hidden;
 }
 
+@mixin optimizeFitty {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 #futura {
   font-family: 'futura-pt', Arial, Helvetica, sans-serif;
   // futura article styles
   min-height: 100vh;
   width: 100%;
   background-color: gray;
+}
+
+.fitty {
+  @include optimizeFitty();
 }

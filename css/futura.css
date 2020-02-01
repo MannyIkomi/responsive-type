@@ -16,4 +16,9 @@ body {
   width: 100%;
   background-color: gray;
 }
+
+.fitty {
+  display: inline-block;
+  white-space: nowrap;
+}
 /*# sourceMappingURL=futura.css.map */

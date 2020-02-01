@@ -10,11 +10,10 @@
   </head>
   <body>
     <article id="futura">
-      <header>
-        <!-- SVG 100% viewport fit -->
-        <h1>futura</h1>
-        <h2>The Type of our Time</h2>
-      </header>
+      <!-- SVG 100% viewport fit -->
+      <h1 class="fitty">futura</h1>
+      <h2>The Type of our Time</h2>
+
       <p>
         is a geometric sans serif typeface designed by Paul Renner released in
         1927 by the Bauer Type Foundry. Futura is based on geometric shapes like
@@ -29,9 +28,14 @@
       </p>
     </article>
     <article id="gutenberg">
-      <header>
-        <h1>Movable Type</h1>
-      </header>
+      <h1>Movable Type</h1>
     </article>
+    <script src="js/fitty.min.js"></script>
+    <script>
+      console.log(fitty)
+      fitty('.fitty', {
+        minSize: 16
+      })
+    </script>
   </body>
 </html>
