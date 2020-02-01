@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+$orange: #ff5e00;
+$darkGray: #262626;
+$muteGray: #262626;
+
+@mixin maxLineMeasure {
+  max-width: 40rem; // !ch suppoert fallback
+  max-width: 75ch;
+}
+
+@mixin optimizeFitty {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@mixin futuraText {
+  font-family: 'futura-pt', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+footer {
+  background-color: $darkGray;
+}
+
+a {
+  color: white;
+  &:hover {
+    color: $orange;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'fira-mono', monospace;
+  hanging-punctuation: first last;
+}
+
+a,
+p,
+ul,
+li,
+ol,
+span {
+  @include maxLineMeasure();
+  hanging-punctuation: first last;
+  font-variant-numeric: proportional-nums ordinal;
+  font-family: 'fira-sans', 'Trebuchet MS', 'Lucida Sans Unicode',
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.viewport {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+#exit.flex,
+#intro.flex {
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.document {
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  min-width: 10rem;
+
+  margin: 1rem;
+  width: 50%; // container
+  max-width: 40rem;
+  box-shadow: rgba(0, 0, 0, 0.5) -0.25rem 0.25rem 1rem 0px;
+}
+
+.features.flex {
+  // padding: 2rem;
+  max-width: 80rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+@media screen and (min-width: 600px) {
+  .features.flex {
+    justify-content: center;
+  }
+}
+
+#exit {
+  color: white;
+}
