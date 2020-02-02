@@ -321,14 +321,22 @@ main.content {
   max-width: initial;
 }
 
-#futura #clock #pairs span {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  width: 200%;
-  max-width: initial;
-  line-height: 0.5;
+#futura #clock #pairs {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+#futura #clock #pairs div {
+  position: relative;
+  text-align: center;
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
+  height: 100%;
+}
+
+#futura #clock #pairs span {
+  top: -40%;
+  line-height: 0.25;
 }
 
 #futura #clock svg :not([fill*='none']) {

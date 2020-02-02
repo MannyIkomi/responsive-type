@@ -104,12 +104,16 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
       }
     }
     #pairs {
-      span {
-        transform: rotate(-90deg);
-        width: 200%;
-        max-width: initial;
-        line-height: 0.5;
+      transform: rotate(360deg);
+      div {
+        position: relative;
+        text-align: center; // centers span with text
         animation-duration: 5s;
+        height: 100%;
+      }
+      span {
+        top: -40%;
+        line-height: 0.25;
       }
     }
 
