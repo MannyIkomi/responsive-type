@@ -16,8 +16,9 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
   font-family: $futura;
   // futura article styles
   width: 100%;
+  // max-width: 80rem;
 
-  background-color: hsl(0, 0%, 97%);
+  background-color: $muteGray;
 
   padding: 1rem;
   overflow: hidden;
@@ -27,6 +28,7 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
   li,
   ol,
   span {
+    color: $darkGray;
     @include maxLineMeasure();
     @include futuraText();
     font-variant-numeric: proportional-nums ordinal;
@@ -36,60 +38,149 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
   h2,
   h3,
   h4 {
-    line-height: 1;
+    color: $darkGray;
     @include futuraText();
-  }
-}
-
-@keyframes rotateTime {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-#clock svg {
-  // futura animated clock
-  #hour,
-  #minute {
-    transform-box: border-box;
-    transform-origin: center;
-    animation-name: rotateTime;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    line-height: 1;
   }
 
-  #hour {
-    animation-duration: 60s; // scaled 60seconds/hour
+  .specimens {
+    color: $medGray;
   }
-  #minute {
-    animation-duration: 5s; // scaled (divide hour by 12)
+
+  @keyframes rotateTime {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  #clock {
+    position: relative;
+
+    #year,
+    #pairs {
+      position: absolute;
+      z-index: 2;
+
+      // centers and fills container for animation centering
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      div {
+        // positioning container to get text outside of clock
+        position: relative;
+        width: 100%;
+
+        transform-origin: center center;
+        animation-name: rotateTime;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        span {
+          position: relative;
+
+          color: $medGray;
+          // width: 150%;
+          font-size: 2rem;
+          // animation-duration: 10s;
+        }
+      }
+    }
+    #year {
+      transform: rotate(
+        -45deg
+      ); //offset initial position to align with hour hand
+      div {
+        text-align: right;
+        animation-duration: 60s;
+      }
+      span {
+        right: -20%;
+        max-width: initial;
+      }
+    }
+    #pairs {
+      span {
+        transform: rotate(-90deg);
+        width: 200%;
+        max-width: initial;
+        line-height: 0.5;
+        animation-duration: 5s;
+      }
+    }
+
+    svg {
+      // futura animated clock
+      :not([fill*='none']) {
+        fill: $darkGray;
+      }
+
+      #hour,
+      #minute {
+        transform-box: fill-box;
+        transform-origin: center center;
+        animation-name: rotateTime;
+        // animation-duration: 30s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      #hour {
+        animation-duration: 60s; // scaled 60seconds/hour
+      }
+      #minute {
+        animation-duration: 5s; // scaled (divide hour by 12)
+      }
+    }
   }
 }
 
 // .futura-title {}
 
 @media screen and (min-width: 600px) {
-  .futura-grid {
-    max-width: 100vw;
-    display: grid;
-    grid-template: repeat(6, 1fr) / repeat(5, 1fr);
-    grid-auto-flow: row;
-  }
+  #futura {
+    .futura-grid {
+      max-width: 100vw;
+      display: grid;
+      grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-auto-flow: column;
+    }
 
-  .futura-title {
-    grid-column: 2 / 5;
-    grid-row: 1 / 2;
-  }
-  .futura-subtitle {
-    grid-column: 4 / -1;
-    grid-row: 1 / 2;
-  }
-  .futura-text {
-    grid-column: 3 / 5;
-    grid-row: 2 / 3;
+    .futura-title {
+      justify-self: bottom;
+      grid-column: 2 / 5;
+      grid-row: 1 / 2;
+    }
+    .futura-subtitle {
+      grid-column: 4 / 6;
+      grid-row: 1 / 2;
+    }
+    .futura-text {
+      grid-column: 3 / 5;
+      grid-row: 2 / 3;
+    }
+
+    #clock {
+      width: 133%;
+      justify-self: end;
+      grid-column: 1 / 4;
+      grid-row: 4 / 6;
+    }
+
+    #xyz {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+
+      align-self: center;
+    }
+
+    #aa {
+      grid-column: 4;
+      grid-row: 5 / 6;
+    }
   }
 }
