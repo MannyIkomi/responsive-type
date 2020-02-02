@@ -167,14 +167,13 @@ main.content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem;
 }
 
 #not-spacer-gif {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin: 25vh 1rem;
+  margin: 33vh 1rem;
   width: 100%;
   border-color: #ff5e00;
   border-style: solid;

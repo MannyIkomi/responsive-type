@@ -142,14 +142,14 @@ main.content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  // padding: 1rem;
 }
 
 #not-spacer-gif {
   // puts some negative space between each project
   align-self: center;
 
-  margin: 25vh 1rem;
+  margin: 33vh 1rem;
   width: 100%;
 
   border-color: $orange;
