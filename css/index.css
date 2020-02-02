@@ -157,6 +157,7 @@ ol {
 }
 
 main.content {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,18 +170,7 @@ main.content {
           align-items: center;
 }
 
-#not-spacer-gif {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin: 33vh 1rem;
-  width: 100%;
-  border-color: #ff5e00;
-  border-style: solid;
-  border-width: 1rem;
-}
-
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 640px) {
   .disclaim {
     display: none;
   }
@@ -196,5 +186,13 @@ main.content {
   #intro {
     padding: 2rem;
   }
+}
+
+#not-spacer-gif {
+  margin: 33vh 0;
+  width: 100%;
+  border-color: #ff5e00;
+  border-style: solid;
+  border-width: 1rem;
 }
 /*# sourceMappingURL=index.css.map */

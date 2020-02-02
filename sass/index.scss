@@ -139,41 +139,37 @@ ol {
 }
 
 main.content {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   // padding: 1rem;
 }
 
-#not-spacer-gif {
-  // puts some negative space between each project
-  align-self: center;
-
-  margin: 33vh 1rem;
-  width: 100%;
-
-  border-color: $orange;
-  border-style: solid;
-  border-width: 1rem;
-}
-
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 640px) {
   // start responsive < 2 columns
   .disclaim {
-    // remove from DOM if on a larger viewport
     display: none;
   }
 
   .features.flex {
     flex-direction: row;
   }
-  // .document {
-  // width: 50%;
-  // }
 }
 
 @media screen and (min-width: 1000px) {
   #intro {
     padding: 2rem;
   }
+}
+
+#not-spacer-gif {
+  // puts some negative space between each project
+
+  margin: 33vh 0;
+  width: 100%;
+
+  border-color: $orange;
+  border-style: solid;
+  border-width: 1rem;
 }
