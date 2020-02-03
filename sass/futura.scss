@@ -12,6 +12,10 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
 //   @include optimizeFitty();
 // }
 
+.paused {
+  animation-play-state: paused;
+}
+
 #futura {
   font-family: $futura;
 
@@ -46,6 +50,7 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
 
   .futura-title h1 {
     font-size: 25vmin;
+    line-height: 0.8;
   }
   .futura-subtitle h2 {
     font-size: 4vmin;
@@ -66,9 +71,11 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
 
   #clock {
     position: relative;
-
     #year,
     #pairs {
+      .paused {
+        animation-play-state: paused;
+      }
       position: absolute;
       z-index: 2;
 
@@ -98,6 +105,7 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
         }
       }
     }
+
     #year {
       transform: rotate(
         -45deg

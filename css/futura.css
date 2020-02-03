@@ -195,6 +195,11 @@ main.content {
   border: none;
 }
 
+.paused {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
 #futura {
   font-family: "futura-pt", Arial, Helvetica, sans-serif;
   width: 100%;
@@ -231,6 +236,7 @@ main.content {
 
 #futura .futura-title h1 {
   font-size: 25vmin;
+  line-height: 0.8;
 }
 
 #futura .futura-subtitle h2 {
@@ -282,6 +288,12 @@ main.content {
           align-items: center;
   width: 100%;
   height: 100%;
+}
+
+#futura #clock #year .paused,
+#futura #clock #pairs .paused {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 #futura #clock #year div,
