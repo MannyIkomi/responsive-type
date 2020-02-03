@@ -130,7 +130,7 @@ address {
       display: grid;
       grid-template-areas: 'vma h3 h3' 'vma code code' 'vma title title' 'vma h2 h2';
       grid-template-columns: 20vw 1fr 1fr;
-      grid-template-rows: max-content 1fr 1fr min-content;
+      grid-template-rows: min-content 1fr 1fr min-content;
       justify-content: end;
       align-content: end;
 
@@ -139,7 +139,8 @@ address {
       h1,
       h2,
       h3 {
-        z-index: 2;
+        padding: 1rem;
+        z-index: 1;
       }
 
       h2 {
@@ -147,7 +148,7 @@ address {
         grid-area: h2;
         // justify-self: center;
       }
-      h3,
+      #course-bhcc,
       #course-code {
         color: $bhcc-gray;
         font-size: 1.33rem;

@@ -325,9 +325,9 @@ address {
         grid-template-areas: 'vma h3 h3' 'vma code code' 'vma title title' 'vma h2 h2';
     -ms-grid-columns: 20vw 1fr 1fr;
         grid-template-columns: 20vw 1fr 1fr;
-    -ms-grid-rows: max-content 1fr 1fr min-content;
-        grid-template-rows: -webkit-max-content 1fr 1fr -webkit-min-content;
-        grid-template-rows: max-content 1fr 1fr min-content;
+    -ms-grid-rows: min-content 1fr 1fr min-content;
+        grid-template-rows: -webkit-min-content 1fr 1fr -webkit-min-content;
+        grid-template-rows: min-content 1fr 1fr min-content;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
@@ -338,7 +338,8 @@ address {
   #sylabus header.grid h1,
   #sylabus header.grid h2,
   #sylabus header.grid h3 {
-    z-index: 2;
+    padding: 1rem;
+    z-index: 1;
   }
   #sylabus header.grid h2 {
     color: #ececec;
@@ -347,7 +348,7 @@ address {
     -ms-grid-column-span: 2;
     grid-area: h2;
   }
-  #sylabus header.grid h3,
+  #sylabus header.grid #course-bhcc,
   #sylabus header.grid #course-code {
     color: #ececec;
     font-size: 1.33rem;
