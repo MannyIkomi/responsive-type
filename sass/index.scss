@@ -168,10 +168,12 @@ main.content {
 #not-spacer-gif {
   // puts some negative space between each project
 
-  margin: 33vh 0;
+  // margin: 33vh 0;
+  background-color: $darkGray;
   width: 100%;
-
-  border-color: $orange;
-  border-style: solid;
-  border-width: 1rem;
+  height: 66vh;
+  border: none;
+  // border-color: $orange;
+  // border-style: solid;
+  // border-width: 1rem;
 }
