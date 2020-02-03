@@ -129,7 +129,7 @@ address {
 
       display: grid;
       grid-template-areas: 'vma h3 h3' 'vma code code' 'vma title title' 'vma h2 h2';
-      grid-template-columns: 20vw 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: min-content 1fr 1fr min-content;
       justify-content: end;
       align-content: end;
@@ -178,8 +178,8 @@ address {
       left: 0;
       z-index: 0;
 
-      transform: rotate(90deg);
-      transform-origin: bottom left;
+      transform: rotate(90deg) translateY(-99%);
+      transform-origin: top left;
 
       span {
         color: $bhcc-red50;
@@ -194,7 +194,7 @@ address {
   }
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: $optimalView) {
   #sylabus.grid {
     // background-color: $bhcc-red50;
 

@@ -323,8 +323,8 @@ address {
     display: -ms-grid;
     display: grid;
         grid-template-areas: 'vma h3 h3' 'vma code code' 'vma title title' 'vma h2 h2';
-    -ms-grid-columns: 20vw 1fr 1fr;
-        grid-template-columns: 20vw 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-rows: min-content 1fr 1fr min-content;
         grid-template-rows: -webkit-min-content 1fr 1fr -webkit-min-content;
         grid-template-rows: min-content 1fr 1fr min-content;
@@ -381,10 +381,10 @@ address {
     top: 0;
     left: 0;
     z-index: 0;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    -webkit-transform-origin: bottom left;
-            transform-origin: bottom left;
+    -webkit-transform: rotate(90deg) translateY(-99%);
+            transform: rotate(90deg) translateY(-99%);
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
   }
   #sylabus #vma span {
     color: #e58081;

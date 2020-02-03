@@ -145,7 +145,7 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
 
 // .futura-title {}
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: $optimalView) {
   #futura {
     .futura-grid {
       max-width: 100vw;
