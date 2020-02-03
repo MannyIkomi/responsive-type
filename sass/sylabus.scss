@@ -141,10 +141,10 @@ address {
       h3 {
         padding: 1rem;
         z-index: 1;
+        color: $bhcc-gray;
       }
 
       h2 {
-        color: $bhcc-gray;
         grid-area: h2;
         // justify-self: center;
       }
@@ -230,6 +230,11 @@ address {
         align-items: flex-end;
       }
     }
+
+    aside h2 {
+      color: hsl(0, 0%, 33%);
+    }
+
     footer.content {
       grid-area: footer;
 

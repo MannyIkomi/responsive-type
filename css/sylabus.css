@@ -339,9 +339,9 @@ address {
   #sylabus header.grid h3 {
     padding: 1rem;
     z-index: 1;
+    color: #ececec;
   }
   #sylabus header.grid h2 {
-    color: #ececec;
     -ms-grid-row: 4;
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
@@ -438,6 +438,9 @@ address {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+  }
+  #sylabus.grid aside h2 {
+    color: #545454;
   }
   #sylabus.grid footer.content {
     -ms-grid-row: 6;
