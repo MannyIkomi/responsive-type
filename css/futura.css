@@ -195,11 +195,6 @@ main.content {
   border: none;
 }
 
-.fitty {
-  display: inline-block;
-  white-space: nowrap;
-}
-
 #futura {
   font-family: "futura-pt", Arial, Helvetica, sans-serif;
   width: 100%;
@@ -232,6 +227,14 @@ main.content {
   font-size: 1.2rem;
   line-height: 1.4;
   line-height: 1;
+}
+
+#futura .futura-title h1 {
+  font-size: 25vmin;
+}
+
+#futura .futura-subtitle h2 {
+  font-size: 4vmin;
 }
 
 #futura .specimens {
@@ -415,6 +418,10 @@ main.content {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
+    font-size: 5vmin;
+    text-align: center;
+    -ms-grid-column-align: left;
+        justify-self: left;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -425,6 +432,7 @@ main.content {
     -ms-grid-row: 5;
     -ms-grid-row-span: 1;
     grid-row: 5 / 6;
+    font-size: 5vmin;
   }
 }
 /*# sourceMappingURL=futura.css.map */

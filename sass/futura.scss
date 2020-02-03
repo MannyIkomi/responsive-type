@@ -8,12 +8,13 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
   line-height: 1.4;
 }
 
-.fitty {
-  @include optimizeFitty();
-}
+// .fitty {
+//   @include optimizeFitty();
+// }
 
 #futura {
   font-family: $futura;
+
   // futura article styles
   width: 100%;
   max-width: 80rem;
@@ -41,6 +42,13 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
     color: $darkGray;
     @include futuraText();
     line-height: 1;
+  }
+
+  .futura-title h1 {
+    font-size: 25vmin;
+  }
+  .futura-subtitle h2 {
+    font-size: 4vmin;
   }
 
   .specimens {
@@ -143,8 +151,6 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
   }
 }
 
-// .futura-title {}
-
 @media screen and (min-width: $optimalView) {
   #futura {
     .futura-grid {
@@ -179,12 +185,18 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
       grid-column: 2 / 3;
       grid-row: 2 / 3;
 
+      font-size: 5vmin;
+      text-align: center;
+
+      justify-self: left;
       align-self: center;
     }
 
     #aa {
       grid-column: 4;
       grid-row: 5 / 6;
+
+      font-size: 5vmin;
     }
   }
 }
