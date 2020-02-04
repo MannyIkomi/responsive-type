@@ -1,15 +1,13 @@
-const pause = document.getElementById('pause')
+const controls = document.querySelectorAll('.control')
+const plays = document.querySelectorAll('.plays')
 
 const clock = document.getElementById('clock')
 
-const year = document.getElementById('year')
-const pairs = document.getElementById('pairs')
-const minute = document.getElementById('minute')
-const hour = document.getElementById('hour')
-
 console.log(clock)
+console.log(plays)
+console.log(controls)
 
-pause.addEventListener('click', e => {
-  console.log(e)
-  pairs.classList.toggle('paused')
-})
+// pause.addEventListener('click', e => {
+//   console.log(e)
+//   pairs.classList.toggle('paused')
+// })

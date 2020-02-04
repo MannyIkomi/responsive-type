@@ -12,6 +12,10 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
 //   @include optimizeFitty();
 // }
 
+.plays {
+  animation-play-state: running;
+  // enables select of nodelist
+}
 .paused {
   animation-play-state: paused;
 }
@@ -74,9 +78,6 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
     position: relative;
     #year,
     #pairs {
-      .paused {
-        animation-play-state: paused;
-      }
       position: absolute;
       z-index: 2;
 
