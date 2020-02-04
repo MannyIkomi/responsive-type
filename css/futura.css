@@ -270,6 +270,7 @@ main.content {
 }
 
 #futura #clock {
+  padding: 1rem;
   position: relative;
 }
 
