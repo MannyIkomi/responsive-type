@@ -192,6 +192,12 @@ button {
         animation-duration: 5s; // scaled (divide hour by 12)
       }
     }
+    // clock
+  }
+  #xyz,
+  #aa {
+    // remove extra ornaments from mobile view
+    display: none;
   }
 }
 
@@ -216,6 +222,11 @@ button {
     .futura-text {
       grid-column: 3 / 5;
       grid-row: 2 / 3;
+    }
+
+    .shapes {
+      grid-column: 4 / 6;
+      grid-row: 4 / 5;
     }
 
     #clock {
