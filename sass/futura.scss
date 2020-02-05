@@ -35,25 +35,13 @@ button {
 // used to track toggle colors
 // }
 
-#futura {
-  .control {
-    min-width: $touchTarget;
-    min-height: $touchTarget;
-    width: 100%;
+.transition {
+  transition-property: fill;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1s;
+}
 
-    margin: 2rem;
-    svg {
-      fill: $darkGray;
-    }
-  }
-  .toggle-color {
-    svg {
-      fill: red;
-    }
-  }
-  .shapes {
-    display: flex;
-  }
+#futura {
   font-family: $futura;
 
   width: 100%;
@@ -90,6 +78,31 @@ button {
   }
   .futura-subtitle h2 {
     font-size: 4vmin;
+  }
+
+  .control {
+    min-width: $touchTarget;
+    min-height: $touchTarget;
+    width: 100%;
+    // height: auto;
+    max-width: $touchTarget * 2;
+
+    margin: $touchTarget / 2;
+    svg {
+      fill: $medGray;
+    }
+
+    // switches control color above
+    &.toggle-color {
+      svg {
+        fill: rgb(232, 15, 15);
+      }
+    }
+  }
+  .shapes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .specimens {
@@ -192,6 +205,21 @@ button {
         animation-duration: 5s; // scaled (divide hour by 12)
       }
     }
+    &.toggle-color {
+      svg {
+        :not([fill*='none']) {
+          fill: $medGray;
+        }
+      }
+      // #hour,
+      // #minute,
+      // #rotor {
+      //   :not([fill*='none']) {
+      //     fill: red;
+      //   }
+      // }
+    }
+
     // clock
   }
   #xyz,
@@ -213,20 +241,25 @@ button {
     .futura-title {
       justify-self: bottom;
       grid-column: 2 / 5;
-      grid-row: 1 / 2;
+      grid-row: 2 / 3;
     }
     .futura-subtitle {
       grid-column: 4 / 6;
       grid-row: 1 / 2;
+      margin: 1rem 0;
     }
     .futura-text {
       grid-column: 3 / 5;
-      grid-row: 2 / 3;
+      grid-row: 3 / 4;
     }
 
     .shapes {
+      align-self: center;
       grid-column: 4 / 6;
       grid-row: 4 / 5;
+      .control {
+        margin: $touchTarget;
+      }
     }
 
     #clock {
@@ -237,8 +270,9 @@ button {
     }
 
     #xyz {
+      display: initial;
       grid-column: 2 / 3;
-      grid-row: 2 / 3;
+      grid-row: 3 / 4;
 
       font-size: 5vmin;
       text-align: center;
@@ -248,10 +282,16 @@ button {
     }
 
     #aa {
-      grid-column: 4;
+      display: initial;
+
+      grid-column: 5;
       grid-row: 5 / 6;
 
+      justify-self: end;
+      align-self: end;
+
       font-size: 5vmin;
+      line-height: 1;
     }
   }
 }

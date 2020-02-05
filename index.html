@@ -76,9 +76,9 @@
             twentieth&nbsp;century.
           </p>
           <div class="shapes">
-            <button class="control toggle-color">
+            <button class="control toggle-color transition">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 393 393">
-                <title>square</title>
+                <title>Pause</title>
                 <g id="Layer_2" data-name="Layer 2">
                   <g id="Layer_1-2" data-name="Layer 1">
                     <rect width="393" height="393" />
@@ -96,9 +96,9 @@
                 </g>
               </svg>
             </div> -->
-            <button class="control">
+            <button class="control transition">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 393 393">
-                <title>triangle</title>
+                <title>Play</title>
                 <g id="Layer_2" data-name="Layer 2">
                   <g id="Layer_1-2" data-name="Layer 1">
                     <polygon points="0 393 0 0 393 196.5 0 393" />
@@ -136,15 +136,15 @@
                 xml:space="preserve"
               >
                 <path
+                  id="rotor"
                   fill="#1C1B1A"
                   d="M486.3,470c0-8.8-7.2-16-16-16c-8.8,0-16,7.2-16,16c0,8.8,7.2,16,16,16C479.1,486,486.3,478.8,486.3,470"
                 />
-                <g id="hour" class="playing">
+                <g id="hour" class="playing transition">
                   <rect
                     x="486.6"
                     y="377.9"
                     transform="matrix(0.7071 -0.7071 0.7071 0.7071 -113.6304 504.0631)"
-                    fill="#1C1B1A"
                     width="130.1"
                     height="22.6"
                   />
@@ -153,18 +153,12 @@
                 <g id="minute" class="playing">
                   <g>
                     <!-- <path
-                fill="#1C1B1A"
+                
                 d="M482.1,481.3c6.2-6.2,6.2-16.4,0-22.6c-6.2-6.2-16.4-6.2-22.6,0s-6.2,16.4,0,22.6
               C465.7,487.5,475.9,487.5,482.1,481.3"
               /> -->
                   </g>
-                  <rect
-                    x="459"
-                    y="218.5"
-                    fill="#1C1B1A"
-                    width="22.6"
-                    height="202.3"
-                  />
+                  <rect x="459" y="218.5" width="22.6" height="202.3" />
                   <circle
                     class="bounding"
                     fill="none"
@@ -174,7 +168,6 @@
                   />
                 </g>
                 <path
-                  fill="#1C1B1A"
                   d="M470.3,882.9C236.5,882.9,62.5,702.1,62.5,471c0-232.4,174-413.2,407.8-413.2S878.1,238.6,878.1,471
           C878.1,702.1,704.1,882.9,470.3,882.9 M470.3,3.4C205.3,3.4,0,210,0,471s203.9,466.3,470.3,466.3c265.1,0,470.3-205.3,470.3-466.3
           S735.4,3.4,470.3,3.4"
@@ -182,9 +175,7 @@
               </svg>
             </div>
           </figure>
-          <!-- <span class="specimens" id="pause">
-            ▶ ◻️▮▫️Pause
-          </span> -->
+
           <span id="xyz" class="specimens">
             X <br />
             Y <br />

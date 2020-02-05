@@ -216,6 +216,15 @@ button {
           animation-play-state: paused;
 }
 
+.transition {
+  -webkit-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
 #futura {
   font-family: "futura-pt", Arial, Helvetica, sans-serif;
   width: 100%;
@@ -223,27 +232,6 @@ button {
   background-color: #f2f2f2;
   padding: 1rem;
   overflow: hidden;
-}
-
-#futura .control {
-  min-width: 3rem;
-  min-height: 3rem;
-  width: 100%;
-  margin: 2rem;
-}
-
-#futura .control svg {
-  fill: #262626;
-}
-
-#futura .toggle-color svg {
-  fill: red;
-}
-
-#futura .shapes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 #futura p,
@@ -278,6 +266,34 @@ button {
 
 #futura .futura-subtitle h2 {
   font-size: 4vmin;
+}
+
+#futura .control {
+  min-width: 3rem;
+  min-height: 3rem;
+  width: 100%;
+  max-width: 6rem;
+  margin: 1.5rem;
+}
+
+#futura .control svg {
+  fill: #808080;
+}
+
+#futura .control.toggle-color svg {
+  fill: #e80f0f;
+}
+
+#futura .shapes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #futura .specimens {
@@ -412,6 +428,10 @@ button {
           animation-duration: 5s;
 }
 
+#futura #clock.toggle-color svg :not([fill*='none']) {
+  fill: #808080;
+}
+
 #futura #xyz,
 #futura #aa {
   display: none;
@@ -431,9 +451,9 @@ button {
     -ms-grid-column: 2;
     -ms-grid-column-span: 3;
     grid-column: 2 / 5;
-    -ms-grid-row: 1;
+    -ms-grid-row: 2;
     -ms-grid-row-span: 1;
-    grid-row: 1 / 2;
+    grid-row: 2 / 3;
   }
   #futura .futura-subtitle {
     -ms-grid-column: 4;
@@ -442,22 +462,29 @@ button {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
+    margin: 1rem 0;
   }
   #futura .futura-text {
     -ms-grid-column: 3;
     -ms-grid-column-span: 2;
     grid-column: 3 / 5;
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-row-span: 1;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
   }
   #futura .shapes {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     -ms-grid-column: 4;
     -ms-grid-column-span: 2;
     grid-column: 4 / 6;
     -ms-grid-row: 4;
     -ms-grid-row-span: 1;
     grid-row: 4 / 5;
+  }
+  #futura .shapes .control {
+    margin: 3rem;
   }
   #futura #clock {
     width: 133%;
@@ -471,12 +498,13 @@ button {
     grid-row: 4 / 6;
   }
   #futura #xyz {
+    display: initial;
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2 / 3;
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-row-span: 1;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     font-size: 5vmin;
     text-align: center;
     -ms-grid-column-align: left;
@@ -486,12 +514,19 @@ button {
         align-self: center;
   }
   #futura #aa {
-    -ms-grid-column: 4;
-    grid-column: 4;
+    display: initial;
+    -ms-grid-column: 5;
+    grid-column: 5;
     -ms-grid-row: 5;
     -ms-grid-row-span: 1;
     grid-row: 5 / 6;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
     font-size: 5vmin;
+    line-height: 1;
   }
 }
 /*# sourceMappingURL=futura.css.map */

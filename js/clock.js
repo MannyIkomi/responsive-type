@@ -16,9 +16,9 @@ controls.forEach(control =>
       animating.classList.toggle('paused')
     })
     controls.forEach(control => {
-      // control.classList.contains('switch') &&
       control.classList.toggle('toggle-color')
     })
+    clock.classList.toggle('toggle-color')
   })
 )
 
