@@ -12,6 +12,17 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
 //   @include optimizeFitty();
 // }
 
+button {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
 .plays {
   animation-play-state: running;
   // enables select of nodelist
@@ -21,6 +32,16 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
 }
 
 #futura {
+  .control {
+    width: 100%;
+    padding: 2rem;
+    svg {
+      fill: $darkGray;
+    }
+  }
+  .shapes {
+    display: flex;
+  }
   font-family: $futura;
 
   width: 100%;
@@ -77,6 +98,8 @@ $futura: 'futura-pt', Arial, Helvetica, sans-serif;
     position: relative;
     #year,
     #pairs {
+      background-color: none;
+      pointer-events: none; // prevents blocking button interactions
       position: absolute;
       z-index: 2;
 
