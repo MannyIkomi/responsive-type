@@ -1,7 +1,7 @@
 @import 'index';
 
-$bhcc-red: #cb0003;
-$bhcc-red50: #e58081;
+$vma: #009fcb;
+$vma-tint: #33b2d5;
 $bhcc-gray: #ececec;
 
 $joanna: 'joanna-nova', Cambria, Cochin, Georgia, Times, 'Times New Roman',
@@ -59,9 +59,9 @@ address {
 
   a {
     font-family: $opensans;
-    text-decoration-color: $bhcc-red;
+    text-decoration-color: $vma;
     &:hover {
-      color: $bhcc-red;
+      color: $vma;
     }
   }
 
@@ -70,7 +70,7 @@ address {
     align-items: center;
     justify-content: center;
 
-    background-color: $bhcc-red;
+    background-color: $vma;
 
     color: $bhcc-gray;
     text-align: center;
@@ -78,7 +78,7 @@ address {
 
   h1,
   h2 {
-    color: $bhcc-red;
+    color: $vma;
   }
   ul {
     padding: 0 0 0 1rem;
@@ -182,7 +182,7 @@ address {
       transform-origin: top left;
 
       span {
-        color: $bhcc-red50;
+        color: $vma-tint;
         line-height: 0.5;
         font-size: 25vmax;
         font-weight: 800;
@@ -196,7 +196,7 @@ address {
 
 @media screen and (min-width: $optimalView) {
   #sylabus.grid {
-    // background-color: $bhcc-red50;
+    // background-color: $vma-tint;
 
     display: grid;
     grid-auto-columns: 1fr 2fr;

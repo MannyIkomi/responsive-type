@@ -243,12 +243,12 @@ address {
 
 #sylabus a {
   font-family: "open-sans", sans-serif;
-  -webkit-text-decoration-color: #cb0003;
-          text-decoration-color: #cb0003;
+  -webkit-text-decoration-color: #009fcb;
+          text-decoration-color: #009fcb;
 }
 
 #sylabus a:hover {
-  color: #cb0003;
+  color: #009fcb;
 }
 
 #sylabus header.flex {
@@ -259,14 +259,14 @@ address {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #cb0003;
+  background-color: #009fcb;
   color: #ececec;
   text-align: center;
 }
 
 #sylabus h1,
 #sylabus h2 {
-  color: #cb0003;
+  color: #009fcb;
 }
 
 #sylabus ul {
@@ -386,7 +386,7 @@ address {
             transform-origin: top left;
   }
   #sylabus #vma span {
-    color: #e58081;
+    color: #33b2d5;
     line-height: 0.5;
     font-size: 25vmax;
     font-weight: 800;
