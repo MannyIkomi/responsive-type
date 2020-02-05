@@ -9,22 +9,28 @@ console.log(clock)
 console.log(animating)
 console.log(controls)
 
-// controls.forEach(control =>
-//   control.addEventListener('click', e => {
-//     console.log(e)
-//     plays.forEach(playing => playing.classList.toggle('paused'))
-//   })
-// )
+controls.forEach(control =>
+  control.addEventListener('click', e => {
+    console.log(e)
+    animating.forEach(animating => {
+      animating.classList.toggle('paused')
+    })
+    controls.forEach(control => {
+      // control.classList.contains('switch') &&
+      control.classList.toggle('toggle-color')
+    })
+  })
+)
 
-poster.addEventListener('click', e => {
-  animating.forEach(animating => {
-    animating.classList.toggle('paused')
-  })
-  controls.forEach(control => {
-    // control.classList.contains('switch') &&
-    control.classList.toggle('toggle-color')
-  })
-})
+// poster.addEventListener('click', e => {
+//   animating.forEach(animating => {
+//     animating.classList.toggle('paused')
+//   })
+//   controls.forEach(control => {
+//     // control.classList.contains('switch') &&
+//     control.classList.toggle('toggle-color')
+//   })
+// })
 
 // pause.addEventListener('click', e => {
 //   console.log(e)
