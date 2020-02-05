@@ -1,13 +1,12 @@
-const controls = document.querySelectorAll('.control')
-const plays = document.querySelectorAll('.plays')
+const controls = document.querySelectorAll('button.control')
+const animating = document.querySelectorAll('.playing')
+const poster = document.getElementById('futura')
 
 const clock = document.getElementById('clock')
 
-const poster = document.getElementById('futura')
-
 console.log(poster)
 console.log(clock)
-console.log(plays)
+console.log(animating)
 console.log(controls)
 
 // controls.forEach(control =>
@@ -18,7 +17,13 @@ console.log(controls)
 // )
 
 poster.addEventListener('click', e => {
-  plays.forEach(playing => playing.classList.toggle('paused'))
+  animating.forEach(animating => {
+    animating.classList.toggle('paused')
+  })
+  controls.forEach(control => {
+    // control.classList.contains('switch') &&
+    control.classList.toggle('toggle-color')
+  })
 })
 
 // pause.addEventListener('click', e => {

@@ -1,6 +1,7 @@
 @import 'index';
 
 $futura: 'futura-pt', Arial, Helvetica, sans-serif;
+$touchTarget: 3rem;
 
 @mixin futuraText {
   font-family: $futura;
@@ -23,20 +24,31 @@ button {
   cursor: pointer;
 }
 
-.plays {
+.playing {
   animation-play-state: running;
   // enables select of nodelist
 }
 .paused {
   animation-play-state: paused;
 }
+// .switch {
+// used to track toggle colors
+// }
 
 #futura {
   .control {
+    min-width: $touchTarget;
+    min-height: $touchTarget;
     width: 100%;
-    padding: 2rem;
+
+    margin: 2rem;
     svg {
       fill: $darkGray;
+    }
+  }
+  .toggle-color {
+    svg {
+      fill: red;
     }
   }
   .shapes {

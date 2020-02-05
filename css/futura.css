@@ -206,7 +206,7 @@ button {
   cursor: pointer;
 }
 
-.plays {
+.playing {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -226,12 +226,18 @@ button {
 }
 
 #futura .control {
+  min-width: 3rem;
+  min-height: 3rem;
   width: 100%;
-  padding: 2rem;
+  margin: 2rem;
 }
 
 #futura .control svg {
   fill: #262626;
+}
+
+#futura .toggle-color svg {
+  fill: red;
 }
 
 #futura .shapes {
