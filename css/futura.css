@@ -401,12 +401,16 @@ button {
   line-height: 0.25;
 }
 
-#futura #clock svg :not([fill*='none']) {
-  fill: #262626;
+#futura #clock .clock-parts {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
 }
 
-#futura #clock svg #hour,
-#futura #clock svg #minute {
+#futura #clock #hour-hand,
+#futura #clock #minute-hand {
   transform-box: fill-box;
   -webkit-transform-origin: center center;
           transform-origin: center center;
@@ -418,14 +422,18 @@ button {
           animation-timing-function: linear;
 }
 
-#futura #clock svg #hour {
+#futura #clock #hour-hand {
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
 }
 
-#futura #clock svg #minute {
+#futura #clock #minute-hand {
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
+}
+
+#futura #clock svg :not([fill*='none']) {
+  fill: #262626;
 }
 
 #futura #clock.toggle-color svg :not([fill*='none']) {

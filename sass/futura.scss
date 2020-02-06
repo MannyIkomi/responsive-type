@@ -118,9 +118,13 @@ button {
     }
   }
 
+  @mixin clockAnimation {
+  }
+
   #clock {
     padding: 1rem;
     position: relative;
+
     #year,
     #pairs {
       background-color: none;
@@ -156,9 +160,8 @@ button {
     }
 
     #year {
-      transform: rotate(
-        -45deg
-      ); //offset initial position to align with hour hand
+      //offset initial position to align with hour hand
+      transform: rotate(-45deg);
       div {
         text-align: right;
         animation-duration: 60s;
@@ -169,6 +172,7 @@ button {
       }
     }
     #pairs {
+      //offset initial position to align with hour hand
       transform: rotate(360deg);
       div {
         position: relative;
@@ -182,27 +186,35 @@ button {
       }
     }
 
+    .clock-parts {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    #hour-hand,
+    #minute-hand {
+      transform-box: fill-box;
+      transform-origin: center center;
+      animation-name: rotateTime;
+      // animation-duration: 30s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    #hour-hand {
+      animation-duration: 60s; // scaled 60seconds/hour
+    }
+    #minute-hand {
+      animation-duration: 5s; // scaled (divide hour by 12)
+    }
+
     svg {
       // futura animated clock
       :not([fill*='none']) {
         fill: $darkGray;
-      }
-
-      #hour,
-      #minute {
-        transform-box: fill-box;
-        transform-origin: center center;
-        animation-name: rotateTime;
-        // animation-duration: 30s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-      }
-
-      #hour {
-        animation-duration: 60s; // scaled 60seconds/hour
-      }
-      #minute {
-        animation-duration: 5s; // scaled (divide hour by 12)
       }
     }
     &.toggle-color {
