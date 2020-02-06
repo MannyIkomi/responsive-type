@@ -350,14 +350,6 @@ button {
 #futura #clock #pairs div {
   position: relative;
   width: 100%;
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-  -webkit-animation-name: rotateTime;
-          animation-name: rotateTime;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
 }
 
 #futura #clock #year div span,
@@ -374,8 +366,17 @@ button {
 
 #futura #clock #year div {
   text-align: right;
+  transform-box: fill-box;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation-name: rotateTime;
+          animation-name: rotateTime;
   -webkit-animation-duration: 60s;
           animation-duration: 60s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 #futura #clock #year span {
@@ -391,8 +392,17 @@ button {
 #futura #clock #pairs div {
   position: relative;
   text-align: center;
+  transform-box: fill-box;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation-name: rotateTime;
+          animation-name: rotateTime;
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   height: 100%;
 }
 
@@ -409,27 +419,32 @@ button {
   height: auto;
 }
 
-#futura #clock #hour-hand,
-#futura #clock #minute-hand {
+#futura #clock #hour-hand {
   transform-box: fill-box;
   -webkit-transform-origin: center center;
           transform-origin: center center;
   -webkit-animation-name: rotateTime;
           animation-name: rotateTime;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }
 
-#futura #clock #hour-hand {
-  -webkit-animation-duration: 60s;
-          animation-duration: 60s;
-}
-
 #futura #clock #minute-hand {
+  transform-box: fill-box;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation-name: rotateTime;
+          animation-name: rotateTime;
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 #futura #clock svg :not([fill*='none']) {

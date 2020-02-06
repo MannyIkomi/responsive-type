@@ -118,7 +118,13 @@ button {
     }
   }
 
-  @mixin clockAnimation {
+  @mixin clockAnimation($duration) {
+    transform-box: fill-box;
+    transform-origin: center center;
+    animation-name: rotateTime;
+    animation-duration: $duration;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
 
   #clock {
@@ -144,17 +150,10 @@ button {
         position: relative;
         width: 100%;
 
-        transform-origin: center center;
-        animation-name: rotateTime;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
         span {
           position: relative;
-
           color: $medGray;
-          // width: 150%;
           font-size: 2rem;
-          // animation-duration: 10s;
         }
       }
     }
@@ -164,7 +163,7 @@ button {
       transform: rotate(-45deg);
       div {
         text-align: right;
-        animation-duration: 60s;
+        @include clockAnimation(60s);
       }
       span {
         right: -20%;
@@ -177,7 +176,7 @@ button {
       div {
         position: relative;
         text-align: center; // centers span with text
-        animation-duration: 5s;
+        @include clockAnimation(5s);
         height: 100%;
       }
       span {
@@ -194,21 +193,13 @@ button {
       height: auto;
     }
 
-    #hour-hand,
-    #minute-hand {
-      transform-box: fill-box;
-      transform-origin: center center;
-      animation-name: rotateTime;
-      // animation-duration: 30s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-    }
-
     #hour-hand {
-      animation-duration: 60s; // scaled 60seconds/hour
+      // scaled 60seconds/hour
+      @include clockAnimation(60s);
     }
     #minute-hand {
-      animation-duration: 5s; // scaled (divide hour by 12)
+      // scaled (divide hour by 12)
+      @include clockAnimation(5s);
     }
 
     svg {
