@@ -77,7 +77,7 @@ button {
     line-height: 0.8;
   }
   .futura-subtitle h2 {
-    font-size: 4vmin;
+    font-size: 2rem;
   }
 
   .control {
@@ -186,6 +186,7 @@ button {
     }
 
     .clock-parts {
+      // stack SVG's ontop of each other
       position: absolute;
       top: 0;
       right: 0;
@@ -214,17 +215,10 @@ button {
           fill: $medGray;
         }
       }
-      // #hour,
-      // #minute,
-      // #rotor {
-      //   :not([fill*='none']) {
-      //     fill: red;
-      //   }
-      // }
     }
-
-    // clock
+    // end clock
   }
+
   #xyz,
   #aa {
     // remove extra ornaments from mobile view
@@ -247,6 +241,9 @@ button {
       grid-row: 2 / 3;
     }
     .futura-subtitle {
+      h2 {
+        font-size: 4vmin;
+      }
       grid-column: 4 / 6;
       grid-row: 1 / 2;
       margin: 1rem 0;
@@ -266,7 +263,8 @@ button {
     }
 
     #clock {
-      width: 133%;
+      // aligns clock with "futura" and "XYZ" ornaments
+      width: 130%;
       justify-self: end;
       grid-column: 1 / 4;
       grid-row: 4 / 6;

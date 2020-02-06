@@ -265,7 +265,7 @@ button {
 }
 
 #futura .futura-subtitle h2 {
-  font-size: 4vmin;
+  font-size: 2rem;
 }
 
 #futura .control {
@@ -487,6 +487,9 @@ button {
     grid-row: 1 / 2;
     margin: 1rem 0;
   }
+  #futura .futura-subtitle h2 {
+    font-size: 4vmin;
+  }
   #futura .futura-text {
     -ms-grid-column: 3;
     -ms-grid-column-span: 2;
@@ -510,7 +513,7 @@ button {
     margin: 3rem;
   }
   #futura #clock {
-    width: 133%;
+    width: 130%;
     -ms-grid-column-align: end;
         justify-self: end;
     -ms-grid-column: 1;
