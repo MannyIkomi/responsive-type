@@ -168,6 +168,7 @@ main.content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #262626;
 }
 
 @media screen and (min-width: 640px) {

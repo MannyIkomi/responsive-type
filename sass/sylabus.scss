@@ -26,6 +26,7 @@ address {
 #sylabus {
   font-family: $opensans;
   max-width: 100vw;
+  background-color: white;
 
   p,
   ul,
@@ -195,7 +196,14 @@ address {
 }
 
 @media screen and (min-width: $optimalView) {
+  #sylabus {
+  }
   #sylabus.grid {
+    header,
+    section,
+    aside {
+      padding: 2vmin;
+    }
     // background-color: $vma-tint;
 
     display: grid;
