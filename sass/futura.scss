@@ -5,6 +5,7 @@ $touchTarget: 3rem;
 
 @mixin futuraText {
   font-family: $futura;
+  font-weight: 100;
   font-size: 1.2rem;
   line-height: 1.4;
 }
@@ -26,14 +27,11 @@ button {
 
 .playing {
   animation-play-state: running;
-  // enables select of nodelist
+  // enables select of nodelist by className
 }
 .paused {
   animation-play-state: paused;
 }
-// .switch {
-// used to track toggle colors
-// }
 
 .transition {
   transition-property: fill;
