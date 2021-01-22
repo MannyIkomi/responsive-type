@@ -45,7 +45,7 @@ span {
   color: inherit;
 
   @include maxLineMeasure();
-  font-variant-numeric: proportional-nums ordinal;
+  font-variant-numeric: proportional-nums;
   hanging-punctuation: first last;
 }
 
@@ -59,6 +59,7 @@ ol {
 #intro,
 #exit {
   background-color: $darkGray;
+  min-height: 33vh;
 }
 
 #exit,
@@ -90,7 +91,7 @@ ol {
     }
   }
   .disclaim {
-    font-size: 0.66rem;
+    font-size: 0.75rem;
     color: $orange;
   }
 }
@@ -167,7 +168,7 @@ main.content {
   // margin: 33vh 0;
   background-color: $darkGray;
   width: 100%;
-  height: 66vh;
+  height: 33vh;
   border: none;
   // border-color: $orange;
   // border-style: solid;

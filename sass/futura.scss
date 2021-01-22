@@ -58,7 +58,7 @@ button {
     color: $darkGray;
     @include maxLineMeasure();
     @include futuraText();
-    font-variant-numeric: proportional-nums ordinal;
+    font-variant-numeric: proportional-nums;
   }
 
   h1,
