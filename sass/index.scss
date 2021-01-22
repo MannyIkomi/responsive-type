@@ -17,12 +17,6 @@ $medGray: #808080;
   max-width: 75ch;
 }
 
-@mixin optimizeFitty {
-  // https://github.com/rikschennink/fitty#performance
-  display: inline-block;
-  white-space: nowrap;
-}
-
 body {
   overflow-x: hidden;
   background-color: $darkGray;
